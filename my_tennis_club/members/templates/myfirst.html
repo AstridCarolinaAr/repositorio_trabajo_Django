@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¿Qué es Django?</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .header {
+      background-color: #0a1f44;
+      color: white;
+      padding: 20px 40px;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .content {
+      padding: 40px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    ¿Qué es Django?
+  </div>
+
+    <table width="100%" cellpadding="0" cellspacing="0">
+      <tr>
+        <!-- Columna del menú lateral izquierdo -->
+        <td width="25%" valign="top" bgcolor="#011635ff" style="padding: 20px; color: white;">
+          <h3 style="color:white;">Temas principales</h3>
+          <ul>
+            <li><a href="#django" style="color:white;">¿Qué es Django?</a></li>
+            <li><a href="#funcion" style="color:white;">Función Django</a></li>
+            <li><a href="#estructura" style="color:white;">Estructura</a></li>
+            <li><a href="#ventajas" style="color:white;">Ventajas</a></li>
+            <li><a href="#desventajas" style="color:white;">Desventajas</a></li>
+            <li><a href="#ejemplo" style="color:white;">Ejemplo</a></li>
+          </ul>
+        </td>
+  
+        <!-- Columna de contenido -->
+        <td width="75%" valign="top">
+          <!-- Aquí comienza tu contenido original -->
+          <div class="content" id="django">
+            <h2 style="color: #0a1f44;">Django</h2>
+             <p>Cualquier aplicación web consta de dos partes: código de servidor y código de cliente.
+        El cliente o visitante del sitio web tiene un navegador. Cuando escriben una URL en su navegador,
+        envían una solicitud a la máquina del servidor web en la que se ejecuta la aplicación web.
+        El servidor procesa la solicitud mediante una base de datos y envía información al cliente como respuesta.
+        El código de cliente muestra la información al visitante como una página web.<hr>
+
+          </div>
+  
+          <div class="content" id="funcion">
+            <h2 style="color: #0a1f44;">Función Django</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT51sLs7yMgbWnPWAGw9PywJPrP_exuOA8YdQ&s" alt="estructura de django" style="display: block; margin: 0 auto;">
+             <p>Desarrollo rápido: Django está diseñado para que los desarrolladores puedan llevar las aplicaciones del concepto 
+        a la finalización lo más rápido posible.<br>
+Tareas comunes automatizadas: Incluye módulos para manejar funcionalidades frecuentes como la autenticación de usuarios,
+  la gestión de formularios, la seguridad y la interacción con bases de datos a través de un ORM (Object-Relational Mapping).<br>
+Panel de administración: Genera automáticamente un panel de administración listo para usar, lo que facilita la gestión de modelos
+ de datos sin necesidad de codificación adicional.<br>
+Patrón de arquitectura: Sigue el patrón de diseño Modelo-Plantilla-Vista (MTV), que ayuda a organizar el código para una mejor mantenibilidad.<br>
+Flexibilidad: Puede ser utilizado para crear casi cualquier tipo de sitio web, desde blogs y wikis hasta redes sociales complejas.<br>
+Escalabilidad: Es un framework robusto y escalable, utilizado por empresas de renombre como Instagram y Mozilla. <hr>
+
+          </div>
+  
+          <div class="content" id="estructura">
+             <h2 style="color: #0a1f44;">Estructura de Django</h2>
+            <p>Un proyecto Django típico tiene una estructura de directorios específica que facilita la organización y escalabilidad de la aplicación. 
+        Aquí te presento la estructura básica con explicaciones detalladas:<br></p>
+            <img src="https://www.netveloper.com/cw/T5HFAFZUKTZ07F72BZUB2219/estructura-directorios-proyecto-django.webp" alt="estructura de django" style="display: block; margin: 0 auto;">
+            <h3 style="color: #0a1f44;"><code>__init__.py</code></h3>
+            <p>Indica que el directorio es un paquete Python Vacío por defecto  Permite importaciones y configuraciones iniciales si es necesario</p>
+            <h3 style="color: #0a1f44;"><code>settings.py</code></h3>
+            <p>Configuraciones centrales del proyecto Incluye configuraciones de base de datos, aplicaciones instaladas, middleware, etc.</p>
+            <h3 style="color: #0a1f44;"><code>urls.py</code></h3>
+            <p> Configuración de rutas URL principales Incluye rutas de aplicaciones</p>
+            <hr>
+          </div>
+  
+          <div class="content" id="ventajas">
+            <h2 style="color: #0a1f44;">Ventajas de Django</h2>
+            <h3 style="color: #0a1f44;"><code>Desarrollo rápido:</code></h3>
+            <p> Django acelera el proceso de desarrollo al ofrecer funcionalidades listas para usar como la autenticación de usuarios, plantillas, enrutamiento de URLs y gestión de sesiones. </p>
+            <h3 style="color: #0a1f44;"><code>Seguridad robusta:</code></h3>
+            <p> Proporciona seguridad integrada contra vulnerabilidades comunes como ataques XSS,CSRF e inyecciones SQL, lo que evita tener que codificar estas protecciones manualmente.Escalabilidad: Es adecuado para proyectos de cualquier tamaño, desde MVPs hasta aplicaciones 
+                empresariales complejas, y permite que las aplicaciones crezcan y manejen un alto tráfico.</p>
+            <h3 style="color: #0a1f44;"><code>Reutilización de código:</code></h3>
+            <p>Sigue el principio "DRY" (Don't Repeat Yourself), lo que fomenta la reutilización de código y simplifica el mantenimiento.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGbfQUyBBgYRmG7nxO00GlaJxPlDXAo1v5kQ&s" alt="estructura de django" style="display: block; margin: 0 auto; width:300px; height:300px;">
+            <hr>
+          </div>
+  
+          <div class="content" id="desventajas">
+             <h2 style="color: #0a1f44;">Desventajas de Django</h2>
+    <p> <h3 style="color: #0a1f44;"><code>Curva de aprendizaje:</code></h3>
+        Aunque Django es fácil de usar para desarrolladores con experiencia en Python, 
+        los principiantes pueden encontrar su curva de aprendizaje empinada debido a la cantidad de conceptos y funcionalidades que deben comprender.
+        <h3 style="color: #0a1f44;"><code>Complejidad de la implementación:</code></h3>
+        Django es un framework complejo que requiere una comprensión profunda de programación web y de la arquitectura de aplicaciones web.
+        <h3 style="color: #0a1f44;"><code>Soporte limitado para bases de datos:</code></h3>
+        No ofrece soporte para bases de datos específicas, lo que limita su uso en proyectos de producción.
+        <h3 style="color: #0a1f44;"><code>Rendimiento:</code></h3>
+        Aunque Django es adecuado para la mayoría de las aplicaciones web, puede no ser la mejor opción para aplicaciones que requieren un rendimiento extremadamente alto o baja latencia.
+        <h3 style="color: #0a1f44;"><code>Seguridad:</code></h3>
+        Es importante tener en cuenta que Django no es un framework de seguridad completo, y es posible que las aplicaciones web que se desarrollen con él no estén completamente protegidas contra los ataques más comunes.
+        <h3 style="color: #0a1f44;"><code>Costo de licencia:</code></h3>
+        El costo de licencia de Django puede ser un punto de contento para algunos, pero también puede ser una barrera para otros.
+        <h3 style="color: #0a1f44;"><code>Estructura de proyectos:</code></h3>
+        La estructura de proyectos de Django puede ser compleja y difícil de mantener, especialmente para proyectos grandes o complejos.
+        <h3 style="color: #0a1f44;"><code>Extensibilidad:</code></h3>
+        Aunque Django es un framework muy extensible, puede ser difícil agregar nuevas funcionalidades o personalizar las existentes.
+        <h3 style="color: #0a1f44;"><code>Complejidad de la documentación:</code></h3>
+        La documentación de Django puede ser difícil de entender para los principiantes, y puede ser difícil encontrar la información que se necesita.
+        <img src="https://i.ytimg.com/vi/ezHBi2ZQKLw/maxresdefault.jpg" alt="estructura de django"style="display: block; margin: 0 auto; with:300px;height:300px;"> <hr>
+  
+          <div class="content" id="ejemplo">
+                <h2 style="color: #0a1f44;">Ejemplo de  Django</h2>
+    <img src="https://diegoamorin.com/wp-content/uploads/2022/08/webs-creados-con-django.png" alt="estructura de django"style="display: block; margin: 0 auto;with:400px;height:300px;">
+    <p>Ejemplos de Django incluyen aplicaciones populares como <a href="https://www.instagram.com/" class="enlace-instagram">Instagram</a>
+, <a href="https://open.spotify.com/intl-es" class="enlace-Spotify">Spotify</a> y <a href="https://www.youtube.com/" class="enlace-youtube">Youtube</a>, 
+        que usan Django para manejar grandes cantidades de datos. También hay ejemplos de sitios
+         web de nicho como <a href="https://theonion.com/" class="enlace-Spotify">The onion</a> y <a href="https://disqus.com/" class="enlace-Disqus">Disqus</a>. A nivel de código, un ejemplo es la creación de un 
+         proyecto de comercio electrónico con aplicaciones separadas para productos, carrito de compras 
+         y gestión de usuarios. 
+  </div>
+        </td>
+      </tr>
+    </table>
+
+</body>
+</html>
