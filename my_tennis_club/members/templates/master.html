@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %} s{% endblock %}</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      color: #333;
+    }
+    .header {
+      background-color: #004d00; /* Dark green for a tennis feel */
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    .header a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1em;
+    }
+    main {
+      flex-grow: 1;
+      padding: 20px; /* Add some padding around the content */
+      text-align: center; /* Center the content, including the image */
+    }
+    .main-image {
+      max-width: 80%;
+      height: auto;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+        color: #004d00;
+    }
+    .footer {
+      background-color: #f2f2f2;
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+      border-top: 1px solid #ddd;
+    }
+    .footer-section {
+      width: 20%;
+    }
+    .footer-section h3 {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+    /* Custom styles for member details */
+    .contenido-principal {
+      max-width: 800px; /* Or a suitable width */
+      margin: 20px auto; /* Center the block and add vertical margin */
+      padding: 20px;
+      border: 2px solid #008000; /* Green border */
+      border-radius: 8px; /* Slightly rounded corners */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+      background-color: #fff; /* White background */
+    }
+
+    .tabla-elegante tbody tr:hover {
+      background-color: #a2f0c2; /* Mint green */
+      cursor: pointer; /* Indicate it's interactive */
+    }
+
+    .tabla-elegante td {
+      text-align: left;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>My Tennis Club</h1>
+  <a href="/">Home</a>
+  <a href="/members">Members</a>
+</div>
+
+<main>
+    <h1>Bienvenidos a My Tennis Club</h1>
+  <img src="https://campestrecali.com/wp-content/uploads/2017/07/canchas-de-tenis-club-campestre-cali.jpg" width="600 %" alt="Tennis Club" class="main-image">
+  {% block content %}
+  {% endblock %}
+</main>
+
+<div class="footer">
+  <div class="footer-section">
+    <h3>Ciudades</h3>
+    <p>Colombia</p>
+    <p>España</p>
+    <p>Tokyo</p>
+  </div>
+  <div class="footer-section">
+    <h3>Dueños</h3>
+    <p>Astrid Martinez</p>
+    <p>Sergio De La Fuente</p>
+  </div>
+  <div class="footer-section">
+    <h3>Redes Sociales</h3>
+    <a href="#">Facebook</a><br>
+    <a href="#">Twitter</a><br>
+    <a href="#">Instagram</a>
+  </div>
+  <div class="footer-section">
+    <h3>Contacto</h3>
+    <p>Email: tennisclub@gmail.com</p>
+    <p>Phone: 310-584-3547</p>
+  </div>
+</div>
+
+</body>
+</html>

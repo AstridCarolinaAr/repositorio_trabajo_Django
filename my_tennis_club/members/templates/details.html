@@ -1,0 +1,46 @@
+{% extends "master.html" %}
+
+{% block title %}
+  My Tennis Club - Member Details for {{ mymember.firstname }} {{ mymember.lastname }}
+{% endblock %}
+
+{% block content %}
+<div class="contenido-principal">
+
+  <div class="header-tenis" style="margin: -35px -35px 20px -35px;">
+     <h1>Datos: {{ mymember.firstname }} {{ mymember.lastname }}</h1>
+  </div>
+
+  <table class="tabla">
+    <tbody>
+      <tr>
+        <td><strong>Phone:</strong></td>
+        <td>{{ mymember.phone }}</td>
+      </tr>
+      <tr>
+        <td><strong>Member since:</strong></td>
+        <td>{{ mymember.joined_date }}</td>
+      </tr>
+      <tr>
+        <td><strong>Email:</strong></td>
+        <td>{{ mymember.email }}</td>
+      </tr>
+      <tr>
+        <td><strong>Address:</strong></td>
+        <td>{{ mymember.address }}</td>
+      </tr>
+      <tr>
+        <td><strong>City:</strong></td>
+        <td>{{ mymember.city }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="text-align: center; margin-top: 30px;">
+    <a href="/members" class="btn-saque">Volver a Members</a>
+  </div>
+
+</div>
+
+<p>Back to <a href="/members">Members</a></p>
+{% endblock %}
