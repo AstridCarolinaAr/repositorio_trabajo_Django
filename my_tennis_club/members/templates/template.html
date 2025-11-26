@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'mystyles.css' %}">
+    <link rel="stylesheet" href="{% static 'myglobal.css' %}">
+</head>
+
+<body>
+   <center><title>Query Set</title></center>
+    <h2>Retorna los miembros que tienen el nombre andres</h2>
+    <div class="members-container">
+    {% for x in record_firstname %}
+      <table class="member-details-table">
+        <tr><th>ID</th><td>{{ x.id }}</td></tr>
+        <tr><th>Nombre</th><td>{{ x.firstname }}</td></tr>
+        <tr><th>Apellido</th><td>{{ x.lastname }}</td></tr>
+        <tr><th>Teléfono</th><td>{{ x.phone }}</td></tr>
+        <tr><th>Fecha de Ingreso</th><td>{{ x.joined_date }}</td></tr>
+        <tr><th>Dirección</th><td>{{ x.address }}</td></tr>
+        <tr><th>Ciudad</th><td>{{ x.city }}</td></tr>
+        <tr><th>Correo Electrónico</th><td>{{ x.email }}</td></tr>
+      </table>
+      <img src="{% static 'members/niño.jpg' %}" alt="niñito">
+
+    {% endfor %}
+    </div>
+
+    <h2>Retorna los miembros que tienen el nombre andres y id 2</h2>
+    <div class="members-container">
+    {% for x in record_AND_andres %}
+      <table class="member-details-table">
+        <tr><th>ID</th><td>{{ x.id }}</td></tr>
+        <tr><th>Nombre</th><td>{{ x.firstname }}</td></tr>
+        <tr><th>Apellido</th><td>{{ x.lastname }}</td></tr>
+        <tr><th>Teléfono</th><td>{{ x.phone }}</td></tr>
+        <tr><th>Fecha de Ingreso</th><td>{{ x.joined_date }}</td></tr>
+        <tr><th>Dirección</th><td>{{ x.address }}</td></tr>
+        <tr><th>Ciudad</th><td>{{ x.city }}</td></tr>
+        <tr><th>Correo Electrónico</th><td>{{ x.email }}</td></tr>
+      </table>
+      <img src="{% static 'members/2 andres.avif' %}" alt="niñito"width="400" height="600">
+    {% endfor %}
+    </div>
+
+    <h2>Retorna los mimebros que tienen el nombre andres o el nombre sofia </h2>
+    <div class="members-container">
+    {% for x in record_OR_andres %}
+      <table class="member-details-table">
+        <tr><th>ID</th><td>{{ x.id }}</td></tr>
+        <tr><th>Nombre</th><td>{{ x.firstname }}</td></tr>
+        <tr><th>Apellido</th><td>{{ x.lastname }}</td></tr>
+        <tr><th>Teléfono</th><td>{{ x.phone }}</td></tr>
+        <tr><th>Fecha de Ingreso</th><td>{{ x.joined_date }}</td></tr>
+        <tr><th>Dirección</th><td>{{ x.address }}</td></tr>
+        <tr><th>Ciudad</th><td>{{ x.city }}</td></tr>
+        <tr><th>Correo Electrónico</th><td>{{ x.email }}</td></tr>
+      </table>
+    {% endfor %}
+    <img src="{% static 'members/niños.jpg' %}" alt="niñito"width="500" height="500">
+    </div>
+
+    <h2>Retorna los mimebros que tienen en el inicio del nombre "an"</h2>
+    <div class="members-container">
+    {% for x in record_like_start %}
+      <table class="member-details-table">
+        <tr><th>ID</th><td>{{ x.id }}</td></tr>
+        <tr><th>Nombre</th><td>{{ x.firstname }}</td></tr>
+        <tr><th>Apellido</th><td>{{ x.lastname }}</td></tr>
+        <tr><th>Teléfono</th><td>{{ x.phone }}</td></tr>
+        <tr><th>Fecha de Ingreso</th><td>{{ x.joined_date }}</td></tr>
+        <tr><th>Dirección</th><td>{{ x.address }}</td></tr>
+        <tr><th>Ciudad</th><td>{{ x.city }}</td></tr>
+        <tr><th>Correo Electrónico</th><td>{{ x.email }}</td></tr>
+      </table>
+    {% endfor %}
+    <img src="{% static 'members/niño1.avif' %}" alt="niñito"width="500" height="500">
+    </div>
+
+    <h2>Retorna los mimebros que tienen al final del nombre "res"</h2>
+    <div class="members-container">
+    {% for x in record_like_end %}
+      <table class="member-details-table">
+        <tr><th>ID</th><td>{{ x.id }}</td></tr>
+        <tr><th>Nombre</th><td>{{ x.firstname }}</td></tr>
+        <tr><th>Apellido</th><td>{{ x.lastname }}</td></tr>
+        <tr><th>Teléfono</th><td>{{ x.phone }}</td></tr>
+        <tr><th>Fecha de Ingreso</th><td>{{ x.joined_date }}</td></tr>
+        <tr><th>Dirección</th><td>{{ x.address }}</td></tr>
+        <tr><th>Ciudad</th><td>{{ x.city }}</td></tr>
+        <tr><th>Correo Electrónico</th><td>{{ x.email }}</td></tr>
+      </table>
+    {% endfor %}
+    <img src="{% static 'members/niño2.avif' %}" alt="niñito"width="500" height="500">
+    </div>
+
+    <h2>Retorna los mimebros que tienen en alguna parte del nombre "re"</h2>
+    <div class="members-container">
+    {% for x in record_like_contains%}
+      <table class="member-details-table">
+        <tr><th>ID</th><td>{{ x.id }}</td></tr>
+        <tr><th>Nombre</th><td>{{ x.firstname }}</td></tr>
+        <tr><th>Apellido</th><td>{{ x.lastname }}</td></tr>
+        <tr><th>Teléfono</th><td>{{ x.phone }}</td></tr>
+        <tr><th>Fecha de Ingreso</th><td>{{ x.joined_date }}</td></tr>
+        <tr><th>Dirección</th><td>{{ x.address }}</td></tr>
+        <tr><th>Ciudad</th><td>{{ x.city }}</td></tr>
+        <tr><th>Correo Electrónico</th><td>{{ x.email }}</td></tr>
+      </table>
+    {% endfor %}
+    <img src="{% static 'members/niño3.avif' %}" alt="niñito"width="500" height="500">
+    </div>
+    
+    <h2>Retorna los mimebros que estan en el rango de id desde 2 hasta 4</h2>
+    <div class="members-container">
+    {% for x in record_range%}
+      <table class="member-details-table">
+        <tr><th>ID</th><td>{{ x.id }}</td></tr>
+        <tr><th>Nombre</th><td>{{ x.firstname }}</td></tr>
+        <tr><th>Apellido</th><td>{{ x.lastname }}</td></tr>
+        <tr><th>Teléfono</th><td>{{ x.phone }}</td></tr>
+        <tr><th>Fecha de Ingreso</th><td>{{ x.joined_date }}</td></tr>
+        <tr><th>Dirección</th><td>{{ x.address }}</td></tr>
+        <tr><th>Ciudad</th><td>{{ x.city }}</td></tr>
+        <tr><th>Correo Electrónico</th><td>{{ x.email }}</td></tr>
+      </table>
+    {% endfor %}
+    <img src="{% static 'members/dos niños.jpg' %}" alt="niñito"width="500" height="500">
+    </div>
+
+    <h2>Retorna los mimebros que tienen exactamente el nombre andres</h2>
+    <div class="members-container">
+    {% for x in record_exact %}
+      <table class="member-details-table">
+        <tr><th>ID</th><td>{{ x.id }}</td></tr>
+        <tr><th>Nombre</th><td>{{ x.firstname }}</td></tr>
+        <tr><th>Apellido</th><td>{{ x.lastname }}</td></tr>
+        <tr><th>Teléfono</th><td>{{ x.phone }}</td></tr>
+        <tr><th>Fecha de Ingreso</th><td>{{ x.joined_date }}</td></tr>
+        <tr><th>Dirección</th><td>{{ x.address }}</td></tr>
+        <tr><th>Ciudad</th><td>{{ x.city }}</td></tr>
+        <tr><th>Correo Electrónico</th><td>{{ x.email }}</td></tr>
+      </table>
+    {% endfor %}
+    <img src="{% static 'members/niño4.jpg' %}" alt="niñito"width="500" height="500">
+    </div>
+
+    <h2>Retorna los mimebros en Orden Ascendente </h2>
+    <div class="members-container">
+    {% for x in orderby_asc %}
+      <table class="member-details-table">
+        <tr><th>ID</th><td>{{ x.id }}</td></tr>
+        <tr><th>Nombre</th><td>{{ x.firstname }}</td></tr>
+        <tr><th>Apellido</th><td>{{ x.lastname }}</td></tr>
+        <tr><th>Teléfono</th><td>{{ x.phone }}</td></tr>
+        <tr><th>Fecha de Ingreso</th><td>{{ x.joined_date }}</td></tr>
+        <tr><th>Dirección</th><td>{{ x.address }}</td></tr>
+        <tr><th>Ciudad</th><td>{{ x.city }}</td></tr>
+        <tr><th>Correo Electrónico</th><td>{{ x.email }}</td></tr>
+      </table>
+    {% endfor %}
+    </div>
+
+    <h2 >Retorna los mimebros en Orden Descendente</h2>
+    <div class="members-container">
+    {% for x in orderby_desc %}
+      <table class="member-details-table">
+        <tr><th>ID</th><td>{{ x.id }}</td></tr>
+        <tr><th>Nombre</th><td>{{ x.firstname }}</td></tr>
+        <tr><th>Apellido</th><td>{{ x.lastname }}</td></tr>
+        <tr><th>Teléfono</th><td>{{ x.phone }}</td></tr>
+        <tr><th>Fecha de Ingreso</th><td>{{ x.joined_date }}</td></tr>
+        <tr><th>Dirección</th><td>{{ x.address }}</td></tr>
+        <tr><th>Ciudad</th><td>{{ x.city }}</td></tr>
+        <tr><th>Correo Electrónico</th><td>{{ x.email }}</td></tr>
+      </table>
+    {% endfor %}
+    </div>
+
+</body>
+</html>

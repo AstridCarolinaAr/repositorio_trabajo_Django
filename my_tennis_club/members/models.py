@@ -8,3 +8,5 @@ class Member(models.Model):
   email = models.EmailField(null=True)
   address = models.CharField(null=True)
   city = models.CharField(null=True)
+  def __str__(self):
+    return f"{self.firstname} {self.lastname}"
